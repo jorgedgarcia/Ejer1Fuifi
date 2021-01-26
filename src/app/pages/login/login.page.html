@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="containerdiv">
+      <ion-img src="assets/login-default.png" alt="img"></ion-img>
+      <ion-img  class="cornerimage" src="assets/icon-white.svg" alt=""></ion-img>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-input  class="bg2" type="email" placeholder="Correo eléctronico" [(ngModel)]="correo"></ion-input>
+  <ion-input  class="bg2" type="password" placeholder="Contraseña" [(ngModel)]="contrasenya"></ion-input>
+  <ion-buttons>
+    <ion-button class="bg" (click)="Login()"> <ion-title class="-CTA">Iniciar sesión</ion-title></ion-button>
+  </ion-buttons>
+
+<!--  <ion-label class="Has-olvidado-tu-con">¿Has olvidado tu contraseña?</ion-label>-->
+</ion-content>

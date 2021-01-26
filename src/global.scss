@@ -1,26 +1,212 @@
-/*
- * App Global CSS
- * ----------------------------------------------------------------------------
- * Put style rules here that you want to apply globally. These styles are for
- * the entire app and not just one component. Additionally, this file can be
- * used as an entry point to import other CSS/Sass files to be included in the
- * output CSS.
- * For more information on global stylesheets, visit the documentation:
- * https://ionicframework.com/docs/layout/global-stylesheets
- */
+///*
+// * App Global CSS
+// * ----------------------------------------------------------------------------
+// * Put style rules here that you want to apply globally. These styles are for
+// * the entire app and not just one component. Additionally, this file can be
+// * used as an entry point to import other CSS/Sass files to be included in the
+// * output CSS.
+// * For more information on global stylesheets, visit the documentation:
+// * https://ionicframework.com/docs/layout/global-stylesheets
+// */
+//
+///* Core CSS required for Ionic components to work properly */
+//@import "~@ionic/angular/css/core.css";
+//
+///* Basic CSS for apps built with Ionic */
+//@import "~@ionic/angular/css/normalize.css";
+//@import "~@ionic/angular/css/structure.css";
+//@import "~@ionic/angular/css/typography.css";
+//@import '~@ionic/angular/css/display.css';
+//
+///* Optional CSS utils that can be commented out */
+//@import "~@ionic/angular/css/padding.css";
+//@import "~@ionic/angular/css/float-elements.css";
+//@import "~@ionic/angular/css/text-alignment.css";
+//@import "~@ionic/angular/css/text-transformation.css";
+//@import "~@ionic/angular/css/flex-utils.css";
 
-/* Core CSS required for Ionic components to work properly */
-@import "~@ionic/angular/css/core.css";
+.Background2 {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  --background: #c00000;
+}
 
-/* Basic CSS for apps built with Ionic */
-@import "~@ionic/angular/css/normalize.css";
-@import "~@ionic/angular/css/structure.css";
-@import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+ion-toolbar {
+  padding-top: 5%;
+}
 
-/* Optional CSS utils that can be commented out */
-@import "~@ionic/angular/css/padding.css";
-@import "~@ionic/angular/css/float-elements.css";
-@import "~@ionic/angular/css/text-alignment.css";
-@import "~@ionic/angular/css/text-transformation.css";
-@import "~@ionic/angular/css/flex-utils.css";
+ion-header{
+  --background: #c00000;
+
+}
+
+.-Label2 {
+  width: auto;
+  height: auto;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: white;
+}
+
+.-Label {
+    padding-left: 15px;
+    margin-top: 20px;
+    font-family: Roboto, sans-serif;;
+    font-size: 19px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: white;
+}
+
+.Back2 {
+  width: 70px;
+  height: 100px;
+  margin: 0 10px 0 0;
+  object-fit: contain;
+}
+
+.value {
+  width: 130px;
+  height: 18px;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #32353a;
+  margin: 0;
+}
+
+.value2 {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #9c9c9c;
+  margin: 0;
+}
+
+.Back-arrow {
+  width: 50px;
+  height: 30px;
+
+}
+
+.Frame {
+
+  padding: 8px 90px 8px 11px;
+}
+
+.Frame {
+
+  padding: 15px 19px 11px 20px;
+}
+
+.ic-arrow {
+
+  padding: 4px 1px 4px 15px;
+  object-fit: contain;
+}
+
+.Shape {
+
+  background-color: white;
+}
+
+.Shape {
+    border: solid 0.4px var(--charcoal-grey);
+    background-color: var(--charcoal-grey);
+    margin-right: 10px;
+  }
+
+.a-web {
+  margin: 0 0 1px 8px;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.53;
+  letter-spacing: normal;
+  color: black;
+}
+
+.Rectangle {
+  padding: 19px 16px;
+  background-color: #f8f8f8;
+}
+
+.Ttulo-de-la-vacante {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #32353a;
+}
+
+.Lorem-ipsum-dolor-si {
+  width: 319px;
+  height: 92px;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.53;
+  letter-spacing: normal;
+  color: #32353a;
+}
+
+.Rectangle {
+  padding: 16px 91px;
+  border-radius: 6px;
+  box-shadow: 0 2px 7px 0 rgba(50, 53, 58, 0.25);
+  background-color: white;
+}
+
+.Ms-informacin {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.53;
+  letter-spacing: normal;
+  padding-left: 0;
+  color: #c00000;
+}
+
+.Combined-Shape {
+  width: 22px;
+  height: 22px;
+  border: solid 0.4px var(--red);
+}
+
+.prueba {
+  align-items: baseline;
+}
+
+
+
+

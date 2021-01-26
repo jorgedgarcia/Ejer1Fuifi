@@ -1,0 +1,72 @@
+.Login-default {
+  position: absolute;
+  padding: 0 0 1px;
+  object-fit: contain;
+}
+
+
+
+.containerdiv{
+  position: relative;
+  float: left;
+  border: 0;
+}
+
+.cornerimage{
+  position: absolute;
+  border: 0;
+  top: 0;
+  right: 135px;
+  bottom: 7px;
+}
+
+.Icon-white {
+  position: absolute;
+  padding: 6px 0 6.2px;
+  object-fit: contain;
+  background-color: var(--white);
+  top: 40px;
+  left: 40px;
+}
+
+.bg2 {
+  width: 200px;
+  height: 48px;
+  margin-top: 32px;
+  --padding-start: 50px;
+  background-color: var(--white);
+}
+
+.bg {
+  width: 150px;
+  padding: 13px 87px;
+  border-radius: 100px;
+  background-color: black;
+  margin: auto;
+  margin-top: 60px;
+}
+
+.-CTA {
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: white;
+}
+
+.Has-olvidado-tu-con {
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: red;
+  padding-top: 100px;
+}

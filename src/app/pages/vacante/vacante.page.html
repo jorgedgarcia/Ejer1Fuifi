@@ -1,0 +1,38 @@
+<ion-header>
+  <div class="prueba">
+  <ion-toolbar class="Background2">
+    <ion-title class="-Label">Vacante</ion-title>
+    <ion-buttons class="Back-arrow">
+      <ion-button class="Back2" routerLink="/vacantes">
+        <ion-img src="assets/back.svg" class="Back-arrow"></ion-img>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+  </div>
+</ion-header>
+
+<ion-content>
+  <ion-title class="Ttulo-de-la-vacante">{{data.titulo}}</ion-title>
+  <ion-list>
+    <ion-item>
+      <ion-img src="assets/ic-puesto-trabajo.svg" class="Shape"></ion-img>
+      <ion-label class="a-web">{{data.vacante}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-img src="assets/ic-calendar.svg" class="Shape"></ion-img>
+    <ion-label class="a-web">{{data.fecha}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-img src="assets/ic-description.svg" class="Shape"></ion-img>
+      <ion-label class="Lorem-ipsum-dolor-si">{{data.comentario}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-buttons class="Rectangle">
+    <ion-button href="https://ionicframework.com/docs/components">
+      <ion-img src="assets/ic-mas-info.svg" class="Combined-Shape"></ion-img>
+    </ion-button>
+    <ion-title class="Ms-informacin">MAS INFORMACIÓN</ion-title>
+  </ion-buttons>
+</ion-content>

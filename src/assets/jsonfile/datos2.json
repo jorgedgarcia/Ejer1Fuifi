@@ -1,0 +1,26 @@
+[{
+  "id": 1,
+  "tituloVacante": "Titulo de la vacante",
+  "vacante": "Programador/a web",
+  "fecha": "2020-04-14"
+},
+  {
+    "id": 2,
+    "tituloVacante": "Titulo de la vacante",
+    "vacante": "Programador/a web2",
+    "fecha": "2020-04-15"
+  },
+  {
+    "id": 3,
+    "tituloVacante": "Titulo de la vacante",
+    "vacante": "Programador/a web3",
+    "fecha": "2020-04-16"
+  },
+  {
+    "id": 4,
+    "tituloVacante": "Titulo de la vacante",
+    "vacante": "Programador/a web4",
+    "fecha": "2020-04-17"
+  }
+
+]

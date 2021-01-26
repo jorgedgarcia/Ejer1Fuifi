@@ -1,16 +1,42 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import {VacantesPage} from './pages/vacantes/vacantes.page';
+
 
 const routes: Routes = [
+   {
+     path: '',
+       redirectTo: 'login',
+     pathMatch: 'full'
+   },
+    {
+        path: 'login',
+        loadChildren: () => import('./pages/login/login.module').then(m => m.LoginPageModule)
+    },
+    {
+        path: 'vacantes',
+        loadChildren: () => import('./pages/vacantes/vacantes.module').then(m => m.VacantesPageModule)
+    },
+    {
+        path: 'vacante',
+        loadChildren: () => import('./pages/vacante/vacante.module').then(m => m.VacantePageModule)
+    },
+    {
+        path: 'vacante/:id',
+        loadChildren: () => import('./pages/vacante/vacante.module').then(m => m.VacantePageModule)
+    },
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
+  //  {
+  //    path: 'vacantes',
+  //    loadChildren: () => import('./pages/vacantes/vacantes.module').then( m => m.VacantesPageModule)
+  //  },
+  //  {
+  //    path: 'vacante',
+  //    loadChildren: () => import('./pages/vacante/vacante.module').then( m => m.VacantePageModule)
+  //  },
 ];
 
 @NgModule({
