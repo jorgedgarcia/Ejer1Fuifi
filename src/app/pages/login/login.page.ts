@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NavController} from '@ionic/angular';
 import {VacantesPage} from '../vacantes/vacantes.page';
+import {FormBuilder, FormControl, FormGroup, NgForm, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -9,26 +10,57 @@ import {VacantesPage} from '../vacantes/vacantes.page';
 })
 export class LoginPage implements OnInit {
 
+  constructor(public navCtrl: NavController, private fb: FormBuilder) {
+
+  }
+
+  get email(){
+    return this.forma.get('emailform');
+  }
+
+  get password(){
+    return this.forma.get('passwordform');
+  }
+
+
   correo: string;
   contrasenya: string;
   okey = false;
-
-  constructor(public navCtrl: NavController) { }
+  forma: FormGroup;
 
   ngOnInit() {
+  //   this.forma = this.fb.group({
+  //     correo: ['', [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')] ],
+    // tslint:disable-next-line:max-line-length
+  //     contrasenya: new FormControl('', Validators.compose([Validators.minLength(8), Validators.required, Validators.pattern('^(?=.[a-z])(?=.[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$'
+  //         )]))
+  // });
   }
 
-  Login(): boolean{
 
-    console.log(this.correo);
-    console.log(this.contrasenya);
-    if (this.correo === 'correo@correo.com' && this.contrasenya === 'alfatec'){
-      this.okey = true;
+Login(form: NgForm) {
 
-      this.navCtrl.navigateForward('/vacantes');
-    }else {
+    if (form.invalid){
+      return;
       alert('Datos incorrectos, prueba de nuevo!');
+    }else {
+      this.navCtrl.navigateForward('/vacantes');
     }
-    return this.okey;
+
+    // console.log(this.correo);
+    // console.log(this.contrasenya);
+    // if (this.correo === 'correo@correo.com' && this.contrasenya === 'aalfatec'){
+    //   this.okey = true;
+    //
+    //   this.navCtrl.navigateForward('/vacantes');
+    // }else {
+    //   alert('Datos incorrectos, prueba de nuevo!');
+    // }
+    // return this.okey;
   }
+
+
 }
+
+
+

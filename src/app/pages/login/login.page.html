@@ -8,11 +8,45 @@
 </ion-header>
 
 <ion-content>
-  <ion-input  class="bg2" type="email" placeholder="Correo eléctronico" [(ngModel)]="correo"></ion-input>
-  <ion-input  class="bg2" type="password" placeholder="Contraseña" [(ngModel)]="contrasenya"></ion-input>
-  <ion-buttons>
-    <ion-button class="bg" (click)="Login()"> <ion-title class="-CTA">Iniciar sesión</ion-title></ion-button>
-  </ion-buttons>
+  <form (ngSubmit)="Login(f)" #f="ngForm">
+    <ion-list>
+      <ion-item>
+        <ion-input name="emailform" class="bg2" type="email" required [pattern]="'[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$'" placeholder="Correo eléctronico" [(ngModel)]="correo"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input name="passwordform" class="bg2" type="password" required minlength="8" placeholder="Contraseña" [(ngModel)]="contrasenya"></ion-input>
+      </ion-item>
+      <ion-buttons>
+        <ion-button class="bg" (click)="Login(f)"> <ion-title class="-CTA">Iniciar sesión</ion-title></ion-button>
+      </ion-buttons>
+    </ion-list>
+  </form>
+
+
+
+
+
+<!--  <form autocomplete="off" [formGroup]="forma" (ngSubmit)="guardar()">-->
+<!--  <div>-->
+<!--    <div>-->
+<!--      <div>-->
+
+<!--        <input-->
+<!--               type="email"-->
+<!--               placeholder="Correo electrónico"-->
+<!--               formControlName="correo"-->
+<!--               [class.is-invalid]="correoNoValido">-->
+<!--        <small *ngIf="correoNoValido" class="text-danger">Ingrese un correo valido</small>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--&lt;!&ndash;  <ion-input  class="bg2" type="email" placeholder="Correo eléctronico" [(ngModel)]="correo"></ion-input>&ndash;&gt;-->
+<!--&lt;!&ndash;  <ion-input  class="bg2" type="password" placeholder="Contraseña" [(ngModel)]="contrasenya"></ion-input>&ndash;&gt;-->
+<!--&lt;!&ndash;  <ion-buttons>&ndash;&gt;-->
+<!--&lt;!&ndash;    <ion-button class="bg" (click)="Login()"> <ion-title class="-CTA">Iniciar sesión</ion-title></ion-button>&ndash;&gt;-->
+<!--&lt;!&ndash;  </ion-buttons>&ndash;&gt;-->
+
+<!--  </form>-->
 
 <!--  <ion-label class="Has-olvidado-tu-con">¿Has olvidado tu contraseña?</ion-label>-->
 </ion-content>
