@@ -3,9 +3,8 @@ import {VacantesPage} from '../vacantes/vacantes.page';
 import {NavController} from '@ionic/angular';
 import {ServiciopruebaService} from '../../services/servicioprueba.service';
 import {ActivatedRoute} from '@angular/router';
+import {Storage} from '@ionic/storage';
 
-class Vacante {
-}
 
 @Component({
   selector: 'app-vacante',
@@ -15,13 +14,19 @@ class Vacante {
 export class VacantePage implements OnInit {
 
   vacante: any = {};
-  data: any;
-  constructor(private service: ServiciopruebaService, private router: ActivatedRoute) {
+  data2: any;
+  constructor(private service: ServiciopruebaService, private router: ActivatedRoute, private storage: Storage) {
 
-     this.router.queryParams.subscribe(params => {
-       console.log(params);
-       this.data = JSON.parse(params.data);
-     });
+    this.data2 = this.router.snapshot.data.data;
+    if (!this.data2){
+      this.storage.get('data').then(data => this.data2 = data);
+    }
+
+
+    // this.router.queryParams.subscribe(params => {
+    //     console.log(params);
+    //     this.data2 = JSON.parse(params.data);
+    //   });
     // this.router.params.subscribe(params => {
     //   this.vacante = params;
     //   console.log(params);

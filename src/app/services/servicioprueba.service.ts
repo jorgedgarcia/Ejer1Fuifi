@@ -1,24 +1,26 @@
 import { Injectable } from '@angular/core';
 import {BehaviorSubject} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
+import {Storage} from '@ionic/storage';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServiciopruebaService {
 
-  results: any;
-  data2: any = {};
+    // tslint:disable-next-line:variable-name
+    _data: any;
 
-  getData(){
-      return this.data;
-  }
+    constructor(private storage: Storage) { }
 
-  set data(data){
-        this.data = data;
-  }
+    get data(): any {
+        return this._data;
+    }
 
-  constructor(private http: HttpClient) { }
+    set data(value: any) {
+        this._data = value;
+        this.storage.set('data', this.data);
+    }
 
   // public get(id: string){
   //   fetch('./assets/jsonfile/datos2.json').then(res => res.json()).then(json => {

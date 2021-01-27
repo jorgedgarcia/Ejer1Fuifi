@@ -13,19 +13,22 @@
 </ion-header>
 
 <ion-content>
-  <ion-title class="Ttulo-de-la-vacante">{{data.titulo}}</ion-title>
+  <ion-list>
+  <ion-img class="img" src={{data2?.imagen}}></ion-img>
+  </ion-list>
+  <ion-title class="Ttulo-de-la-vacante">{{data2?.titulo}}</ion-title>
   <ion-list>
     <ion-item>
       <ion-img src="assets/ic-puesto-trabajo.svg" class="Shape"></ion-img>
-      <ion-label class="a-web">{{data.vacante}}</ion-label>
+      <ion-label class="a-web">{{data2?.vacante}}</ion-label>
     </ion-item>
     <ion-item>
       <ion-img src="assets/ic-calendar.svg" class="Shape"></ion-img>
-    <ion-label class="a-web">{{data.fecha}}</ion-label>
+    <ion-label class="a-web">{{data2?.fecha}}</ion-label>
     </ion-item>
     <ion-item>
       <ion-img src="assets/ic-description.svg" class="Shape"></ion-img>
-      <ion-label class="Lorem-ipsum-dolor-si">{{data.comentario}}</ion-label>
+      <ion-label class="Lorem-ipsum-dolor-si">{{data2?.comentario}}</ion-label>
     </ion-item>
   </ion-list>
 

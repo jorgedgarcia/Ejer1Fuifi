@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import {VacantesPage} from './pages/vacantes/vacantes.page';
+import {DataResolverService} from './services/data-resolver.service';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
     },
     {
         path: 'vacante',
-        loadChildren: () => import('./pages/vacante/vacante.module').then(m => m.VacantePageModule)
+        loadChildren: () => import('./pages/vacante/vacante.module').then(m => m.VacantePageModule),
+        resolve: {data: DataResolverService}
     },
     {
         path: 'vacante/:id',

@@ -14,7 +14,7 @@
         <ion-input name="emailform" class="bg2" type="email" required [pattern]="'[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$'" placeholder="Correo eléctronico" [(ngModel)]="correo"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-input name="passwordform" class="bg2" type="password" required minlength="8" placeholder="Contraseña" [(ngModel)]="contrasenya"></ion-input>
+        <ion-input name="passwordform" class="bg2" type="password" required minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" placeholder="Contraseña" [(ngModel)]="contrasenya"></ion-input>
       </ion-item>
       <ion-buttons>
         <ion-button class="bg" (click)="Login(f)"> <ion-title class="-CTA">Iniciar sesión</ion-title></ion-button>

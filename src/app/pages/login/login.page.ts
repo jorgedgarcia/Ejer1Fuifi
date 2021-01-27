@@ -29,14 +29,17 @@ export class LoginPage implements OnInit {
   forma: FormGroup;
 
   ngOnInit() {
-  //   this.forma = this.fb.group({
-  //     correo: ['', [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')] ],
-    // tslint:disable-next-line:max-line-length
-  //     contrasenya: new FormControl('', Validators.compose([Validators.minLength(8), Validators.required, Validators.pattern('^(?=.[a-z])(?=.[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$'
-  //         )]))
-  // });
+      this.contraseña();
   }
 
+
+  contraseña(){
+       this.forma = this.fb.group({
+                correo: ['', [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')] ],
+                contrasenya: ['', [ Validators.required, Validators.minLength(8), Validators.pattern('^(?=.[A-Za-z])(?=.\d)[A-Za-z\d]$'
+                )]]
+            });
+  }
 
 Login(form: NgForm) {
 
