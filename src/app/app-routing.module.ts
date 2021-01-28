@@ -16,7 +16,8 @@ const routes: Routes = [
     },
     {
         path: 'vacantes',
-        loadChildren: () => import('./pages/vacantes/vacantes.module').then(m => m.VacantesPageModule)
+        loadChildren: () => import('./pages/vacantes/vacantes.module').then(m => m.VacantesPageModule),
+        resolve: {data: DataResolverService}
     },
     {
         path: 'vacante',

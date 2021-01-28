@@ -10,6 +10,8 @@ export class ServiciopruebaService {
 
     // tslint:disable-next-line:variable-name
     _data: any;
+    // tslint:disable-next-line:variable-name
+    _datavacantes: any;
 
     constructor(private storage: Storage) { }
 
@@ -22,7 +24,16 @@ export class ServiciopruebaService {
         this.storage.set('data', this.data);
     }
 
-  // public get(id: string){
+
+    get datavacantes(): any {
+        return this._datavacantes;
+    }
+
+    set datavacantes(value: any) {
+        this._datavacantes = value;
+    }
+
+// public get(id: string){
   //   fetch('./assets/jsonfile/datos2.json').then(res => res.json()).then(json => {
   //        this.results = json;
   //      });
